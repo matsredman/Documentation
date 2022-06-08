@@ -28,3 +28,6 @@ https://www.youtube.com/watch?v=qhCxKrU1AEY
 
 ### Ssh reverse tunneling
 https://jfrog.com/connect/post/reverse-ssh-tunneling-from-start-to-end/
+
+### Cut log files
+https://www.youtube.com/watch?v=L2BFDyYknIg
