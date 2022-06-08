@@ -2,7 +2,7 @@
 Engineer Man
 ---
 
-# Ssh reverse proxy?
+## Ssh reverse proxy?
 https://www.youtube.com/watch?v=mV_8GbzwZMM&list=RDCMUCrUL8K81R4VBzm-KOYwrcxQ&start_radio=1
 
 
@@ -10,5 +10,5 @@ https://www.youtube.com/watch?v=mV_8GbzwZMM&list=RDCMUCrUL8K81R4VBzm-KOYwrcxQ&st
 Brad Traversy
 ---
 
-# Docker sheat cheet
+## Docker sheat cheet
 https://gist.github.com/bradtraversy/89fad226dc058a41b596d586022a9bd3
