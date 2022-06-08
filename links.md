@@ -35,16 +35,19 @@ https://www.youtube.com/watch?v=L2BFDyYknIg
 
 ### My notes
 Remove all files starting with a digit
+
 '''
 rm [0-9]*
 '''
 
 Remove all files with certain letter combinations
+
 '''
 rm x[abcdefghijklmnop]*
 '''
 
 Loop through all files in directory, read the first word in the first line of the file, and save the file as this word
+
 '''
 for f in *; do cat "$f" | tee $(head -n 1 $f | cut -d " " -f 1); done
 '''
