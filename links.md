@@ -75,6 +75,25 @@ Search through files find lines without the word "Timeout"
 cat [0-9]* | grep -v "Timeout"
 ```
 
+### Half open scan, check all open ports on all devices on the subnet.
+### Syn -> <- Syn ACk without the third Ack handshake in TCP. Stealth mode
+
+```
+sudo nmap -sS -p 80,443 192.168.10.0/24
+```
+
+### See all open ports on a specific device
+
+```
+sudo nmap -sT <ip-address>
+```
+
+### Analyse a unit on the network
+
+```
+sudo nmap -A <ip-address>
+```
+
 ---
 POWERSHELL
 ---
