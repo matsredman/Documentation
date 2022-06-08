@@ -69,7 +69,11 @@ Extract .tgz file
 tar -xf MBusLOG.tgz
 ```
 
+Search through files find lines without the word "Timeout"
 
+```
+cat [0-9]* | grep -v "Timeout"
+```
 
 
 
