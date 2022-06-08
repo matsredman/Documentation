@@ -51,3 +51,9 @@ Loop through all files in directory, read the first word in the first line of th
 ```
 for f in *; do cat "$f" | tee $(head -n 1 $f | cut -d " " -f 1); done
 ```
+
+First line in file, put in variable
+```
+line=$(head -n 1 filename)
+```
+
