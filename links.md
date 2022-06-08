@@ -75,6 +75,16 @@ Search through files find lines without the word "Timeout"
 cat [0-9]* | grep -v "Timeout"
 ```
 
+---
+POWERSHELL
+---
+
+Scan the network for units answering on ping
+
+```
+1..254 | ForEach-Object {Get-WmiObject Win32_PingStatus -Filter "Address='192.168.0.$_' and Timeout=200 and ResolveAddressNames='true' and StatusCode=0" | select ProtocolAddress*}
+```
+
 
 
 
