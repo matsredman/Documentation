@@ -22,3 +22,6 @@ MIXED SOURCES
 
 ### Regex visualizator
 https://www.debuggex.com/
+
+### Detect, sweep and scan your network in bash
+https://www.youtube.com/watch?v=qhCxKrU1AEY
