@@ -57,3 +57,20 @@ First line in file, put in variable
 line=$(head -n 1 filename)
 ```
 
+Create a .tgz file from a directory
+
+```
+tar -cvzf MBusLOG.tgz log/
+```
+
+Extract .tgz file
+
+```
+tar -xf MBusLOG.tgz
+```
+
+
+
+
+
+
