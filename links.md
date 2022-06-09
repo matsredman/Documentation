@@ -110,14 +110,11 @@ sudo nmap -A <ip-address>
 
 ```
 ufw status
-
 ufw enable
-
 ufw allow ssh
-
 ufw allow http
-
 ufw allow https
+sudo ufw deny from 203.0.113.100
 ```
 
 ### NGINX
