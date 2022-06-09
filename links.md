@@ -137,7 +137,19 @@ location / {
         proxy_set_header Host $host;
         proxy_cache_bypass $http_upgrade;
     }
-```    
+```   
+
+### SSL Lets encrypt python-certbot
+
+```
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
+sudo apt-get install python-certbot-nginx
+sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
+
+# Only valid for 90 days, test the renewal process with
+certbot renew --dry-run
+```
 
 ---
 POWERSHELL
