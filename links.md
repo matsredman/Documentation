@@ -81,6 +81,12 @@ Grep recursive and show lines before and after the found line
 grep -B 4 -A 4 -r "<word>" .
 ```
 
+Create soft link
+
+```
+ln -s {/path/to/file-name} {link-name}
+```
+
 ### Half open scan, check all open ports on all devices on the subnet.
 ### Syn -> <- Syn ACk without the third Ack handshake in TCP. Stealth mode
 
