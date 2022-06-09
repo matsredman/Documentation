@@ -32,6 +32,11 @@ https://jfrog.com/connect/post/reverse-ssh-tunneling-from-start-to-end/
 ### Cut log files
 https://www.youtube.com/watch?v=L2BFDyYknIg
 
+### Cut and replace delimiter " " with %
+
+```
+cut -d " " -f 1,2 state.txt --output-delimiter='%'
+```
 
 ### My notes
 Remove all files starting with a digit
