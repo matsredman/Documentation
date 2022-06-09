@@ -75,6 +75,12 @@ Search through files find lines without the word "Timeout"
 cat [0-9]* | grep -v "Timeout"
 ```
 
+Grep recursive and show lines before and after the found line
+
+```
+grep -B 4 -A 4 -r "<word>" .
+```
+
 ### Half open scan, check all open ports on all devices on the subnet.
 ### Syn -> <- Syn ACk without the third Ack handshake in TCP. Stealth mode
 
