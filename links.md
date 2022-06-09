@@ -124,7 +124,6 @@ ufw allow https
 
 ```
 sudo nano /etc/nginx/sites-available/default
-
 ```
 
 ```
