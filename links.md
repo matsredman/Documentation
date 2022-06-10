@@ -45,19 +45,26 @@ Remove all files starting with a digit
 rm [0-9]*
 ```
 
-Remove all files with certain letter combinations
+### Remove all files with certain letter combinations
 
 ```
 rm x[abcdefghijklmnop]*
 ```
 
-Loop through all files in directory, read the first word in the first line of the file, and save the file as this word
+### Loop through all files in directory, read the first word in the first line of the file, and save the file as this word
 
 ```
 for f in *; do cat "$f" | tee $(head -n 1 $f | cut -d " " -f 1); done
 ```
 
-First line in file, put in variable
+### Create an alias for your terminal. E.g Copy and paste the following command to your shell’s profile (.profile, .bashrc, .zprofile, etc.)
+
+```
+alias get_idf='. $HOME/esp/esp-idf/export.sh'
+```
+
+###First line in file, put in variable
+
 ```
 line=$(head -n 1 filename)
 ```
