@@ -58,9 +58,11 @@ for f in *; do cat "$f" | tee $(head -n 1 $f | cut -d " " -f 1); done
 ```
 
 ### Create an alias for your terminal. E.g Copy and paste the following command to your shell’s profile (.profile, .bashrc, .zprofile, etc.)
+### And refresh the terminal settings
 
 ```
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
+source ~/.bashrc
 ```
 
 ### First line in file, put in variable
