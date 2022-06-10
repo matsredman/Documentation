@@ -63,37 +63,37 @@ for f in *; do cat "$f" | tee $(head -n 1 $f | cut -d " " -f 1); done
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
 ```
 
-###First line in file, put in variable
+### First line in file, put in variable
 
 ```
 line=$(head -n 1 filename)
 ```
 
-Create a .tgz file from a directory
+### Create a .tgz file from a directory
 
 ```
 tar -cvzf MBusLOG.tgz log/
 ```
 
-Extract .tgz file
+### Extract .tgz file
 
 ```
 tar -xf MBusLOG.tgz
 ```
 
-Search through files find lines without the word "Timeout"
+### Search through files find lines without the word "Timeout"
 
 ```
 cat [0-9]* | grep -v "Timeout"
 ```
 
-Grep recursive and show lines before and after the found line
+### Grep recursive and show lines before and after the found line
 
 ```
 grep -B 4 -A 4 -r "<word>" .
 ```
 
-Create soft link
+### Create soft link
 
 ```
 ln -s {/path/to/file-name} {link-name}
