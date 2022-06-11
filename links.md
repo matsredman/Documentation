@@ -182,4 +182,8 @@ pip list
 pip freeze > requirements.txt
 ```
 
+### Open a running container
 
+```
+Docker container exec -it <container-name> bash
+```
