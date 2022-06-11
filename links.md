@@ -41,6 +41,36 @@ https://www.youtube.com/watch?v=L2BFDyYknIg
 ```
 ssh-keygen -t ed25519 -C "mats-laptop"
 ssh-copy-id -i ~/.ssh/<public-key> <user>@<host>
+
+ssh -i ~/.ssh/<public-key-file> <user>@<host>
+```
+
+### Start the SSH-agent and add your private ssh-keys
+
+```
+eval $(ssh-agent)
+
+ssh-add ~/.ssh/<the-private-key>
+```
+
+### SSH config file ~/.ssh/config
+### It is the private keys
+
+```
+Host acme
+  Hostname 172.105.24.117
+  IdentityFile ~/.ssh/acme_key
+    
+Host skynet
+  Hostname skynet.learnlinux.cloud
+  User admin
+  IdentityFile ~/.ssh/skynet_key
+    
+Host shinra
+  Hostname shinra.learnlinux.cloud
+  User root
+  Port 2222
+  IdentityFile ~/.ssh/shinra_key
 ```
 
 ### Cut and replace delimiter " " with %
@@ -151,6 +181,28 @@ sudo nmap -sS -p 80,443 192.168.10.0/24
 sudo nmap -sT <ip-address>
 ```
 
+### See all ports on your device
+
+```
+netstat
+netstat -at # Listnening TCP ports
+
+netstat -l # All active ports
+
+netstat -u # UDP ports open
+```
+
+### CURL
+
+```
+curl -X POST <ip-address-or-host-name> # -X is method
+curl -X POST --data "p1=value1&p2=value2" <ip-address-or-host-name> # Posting data
+curl -X POST -d value1=avalue -d value2=bvalue <ip-address-or-host-name> # Another way of posting
+curl -o <respone-file> <ip-address-or-host-name> # Saving the response to a file
+curl -I <ip-address-or-host-name> # Get the header of the response
+curl --header "Content-Type:application/json" -X POST -d param=value1 <ip-address-or host-name>
+```
+
 ### Analyse a unit on the network
 
 ```
@@ -168,7 +220,59 @@ ufw allow https
 sudo ufw deny from 203.0.113.100
 ```
 
-### NGINX
+---
+NGINX
+---
+
+### Download the nginx singning key to your host server
+
+```
+wget http://nginxorg/keys/nginx_signing.key
+apt-key add nginx_signing.key
+```
+
+### Paste in 
+### focal is the name of the ubunut 20.04, change to the distribution which you are running on
+
+```
+nano /etc/apt/sources.list.d/nginx.list
+deb [arch=amd64] http://nginx.org/packages/mainline/ubuntu/ focal nginx
+
+apt install nginx
+
+systemctl status nginx
+systemctl enable nginx
+systemctl start nginx
+```
+
+### Create a new nginx configuration file
+
+```
+nano /etc/nginx/conf.d/<your-app-name>.conf
+```
+
+### Paste in
+
+```
+server {
+  listen 80;
+  listen [::]:80;
+  
+  server_name <ip-address-of-your-host-or-your-domain-name>
+  
+  location / {
+    proxy_pass http://localhost:3000/;
+  }
+}
+```
+
+### Move the nginx defualt file
+
+```
+mv default.conf default.conf.disabled
+nginx -t
+nginx -s reload
+```
 
 ```
 sudo nano /etc/nginx/sites-available/default
@@ -187,7 +291,8 @@ location / {
     }
 ```   
 
-### SSL Lets encrypt python-certbot
+### SSL Lets encrypt python-certbot. Choose the Redirect http trasffic to https, choice 2
+### The ssl certificate will automatically update for you, but you can test-run the process
 
 ```
 sudo add-apt-repository ppa:certbot/certbot
