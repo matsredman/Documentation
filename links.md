@@ -187,3 +187,9 @@ pip freeze > requirements.txt
 ```
 Docker container exec -it <container-name> bash
 ```
+
+### Start container with bind mount volume folder
+
+```
+Docker container run -d -p 8080:80 -v $(pwd):/usr/share/nginx/html --name <container-name> nginx
+```
