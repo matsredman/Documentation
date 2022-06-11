@@ -73,6 +73,12 @@ Host shinra
   IdentityFile ~/.ssh/shinra_key
 ```
 
+### Cut or remove characters from input
+
+```
+tr -d <input-string>
+```
+
 ### Cut and replace delimiter " " with %
 
 ```
@@ -145,6 +151,22 @@ ln -s {/path/to/file-name} {link-name}
 
 ```
 ctrl + r
+```
+
+### Clear the screen
+
+```
+ctrl + l
+reset # Resetting your shell
+```
+
+### Save previous cwd
+
+```
+cd /etc
+pushd /var # Puts the directory /etc in a remember-list
+cd /where-ever
+popd # This gets you back to /etc from the remember-list
 ```
 
 ### To see all previously runned commands
