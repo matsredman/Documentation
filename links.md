@@ -35,10 +35,12 @@ https://www.youtube.com/watch?v=L2BFDyYknIg
 ### My notes
 
 ### A better cryptographic type ed25519 
-#### -C is for comment
+### -C is for comment
+### Copy the public key to a remote server
 
 ```
 ssh-keygen -t ed25519 -C "mats-laptop"
+ssh-copy-id -i ~/.ssh/<public-key> <user>@<host>
 ```
 
 ### Cut and replace delimiter " " with %
@@ -123,7 +125,7 @@ HISTTIMEFORMAT="%Y-%m-%d %T "
 history
 ```
 
-#### Run the command from the history list
+### Run the command from the history list
 
 ```
 !<number-in-history-list>
