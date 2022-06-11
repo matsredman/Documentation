@@ -32,13 +32,21 @@ https://jfrog.com/connect/post/reverse-ssh-tunneling-from-start-to-end/
 ### Cut log files
 https://www.youtube.com/watch?v=L2BFDyYknIg
 
+### My notes
+
+### A better cryptographic type ed25519 
+#### -C is for comment
+
+```
+ssh-keygen -t ed25519 -C "mats-laptop"
+```
+
 ### Cut and replace delimiter " " with %
 
 ```
 cut -d " " -f 1,2 state.txt --output-delimiter='%'
 ```
 
-### My notes
 Remove all files starting with a digit
 
 ```
@@ -99,6 +107,33 @@ grep -B 4 -A 4 -r "<word>" .
 
 ```
 ln -s {/path/to/file-name} {link-name}
+```
+
+### Search through previously typed commands
+
+```
+ctrl + r
+```
+
+### To see all previously runned commands
+### Set the time variable 
+
+```
+HISTTIMEFORMAT="%Y-%m-%d %T "
+history
+```
+
+#### Run the command from the history list
+
+```
+!<number-in-history-list>
+```
+
+### Visualize a large amount of data in a more representative way. 
+### mount is an example
+
+```
+mount | column -t
 ```
 
 ### Half open scan, check all open ports on all devices on the subnet.
