@@ -73,6 +73,12 @@ Host shinra
   IdentityFile ~/.ssh/shinra_key
 ```
 
+### Add user to sudo group
+
+```
+usermod -aG sudo <user-name>
+```
+
 ### Cut or remove characters from input
 
 ```
@@ -85,7 +91,7 @@ tr -d <input-string>
 cut -d " " -f 1,2 state.txt --output-delimiter='%'
 ```
 
-Remove all files starting with a digit
+### Remove all files starting with a digit
 
 ```
 rm [0-9]*
