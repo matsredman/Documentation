@@ -196,6 +196,12 @@ history
 mount | column -t
 ```
 
+### Scan the network
+
+```
+nmap -sn 192.168.0.0/24
+```
+
 ### Half open scan, check all open ports on all devices on the subnet.
 ### Syn -> <- Syn ACk without the third Ack handshake in TCP. Stealth mode
 
