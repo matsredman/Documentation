@@ -324,7 +324,11 @@ die-on-term = true
   sudo systemctl restart nginx
 ```
   
-  
+### Solving problems with ufw
+
+```
+sudo update-alternatives --set iptables /usr/sbin/iptables-legacy
+```
   
 
 
