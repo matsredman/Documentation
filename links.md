@@ -19,6 +19,12 @@ https://www.youtube.com/watch?v=mV_8GbzwZMM&list=RDCMUCrUL8K81R4VBzm-KOYwrcxQ&st
 Brad Traversy
 ---
 
+### Flask, SQLAlchemy, Marshmallow
+
+```
+https://www.youtube.com/watch?v=PTZiDnuC86g
+```
+
 ### Docker sheat cheet
 https://gist.github.com/bradtraversy/89fad226dc058a41b596d586022a9bd3
 
