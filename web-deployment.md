@@ -27,7 +27,7 @@ ssh mats@<web-host-ip-address>
 
 ```a
 sudo apt update
-sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools
+sudo apt install default-libmysqlclient-dev python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools
 ```
 
 ### Creating a Python Virtual Environment
