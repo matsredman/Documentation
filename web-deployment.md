@@ -25,7 +25,7 @@ ssh mats@<web-host-ip-address>
 
 ### Install
 
-```
+```a
 sudo apt update
 sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools
 ```
@@ -337,5 +337,9 @@ die-on-term = true
 sudo update-alternatives --set iptables /usr/sbin/iptables-legacy
 ```
   
-
+### Docker container
+  
+```
+docker container run -d -p 8080:80 -v $(pwd):/usr/share/nginx/html --name nginx-website nginx
+```
 
