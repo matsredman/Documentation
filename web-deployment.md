@@ -45,6 +45,7 @@ source myprojectenv/bin/activate
 ```
 pip install wheel
 pip install uwsgi flask
+pip install flask-sqlalchemy flask-marshmallow marshmallow-sqlalchemy mysqlclient
 ```
 
 ### Create a flask app
