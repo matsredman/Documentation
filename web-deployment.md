@@ -344,3 +344,13 @@ sudo update-alternatives --set iptables /usr/sbin/iptables-legacy
 docker container run -d -p 8080:80 -v $(pwd):/usr/share/nginx/html --name nginx-website nginx
 ```
 
+### Testing your API with cURL
+  
+```
+curl -v --header "Content-Type:application/json" \
+--request POST \
+--data '{"title":"article 1", "body":"This is article one"}'
+```
+  
+  
+  
