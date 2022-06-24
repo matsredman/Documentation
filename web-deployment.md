@@ -4,6 +4,10 @@
 www.fullstackpython.com
 ```
 
+```
+pip install httpio # Bibliotek att testa
+```
+
 ### Setting up new user
 
 ```
