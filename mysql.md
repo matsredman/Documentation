@@ -124,10 +124,16 @@ db.create_all()
 
 
 ```
+USE flask; # Select which database to use.
+SHOW TABLES; # Show all atables in database.
+SELECT * FROM Customers; # Show everything from Customers table.
+```
+
+### SQLAlchemy
 
 ```
 
-
+```
 
 
 
