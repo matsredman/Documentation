@@ -103,6 +103,14 @@ tr -d <input-string>
 cut -d " " -f 1,2 state.txt --output-delimiter='%'
 ```
 
+### Sed --> -e stands for expression --> /s stands for substitution
+### 
+
+```
+echo 'hello world' | sed -e ''
+echo 'hello world' | sed -e 's/world/mars'
+```
+
 ### Remove all files starting with a digit
 
 ```
@@ -247,6 +255,7 @@ curl -X POST -d value1=avalue -d value2=bvalue <ip-address-or-host-name> # Anoth
 curl -o <respone-file> <ip-address-or-host-name> # Saving the response to a file
 curl -I <ip-address-or-host-name> # Get the header of the response
 curl --header "Content-Type:application/json" -X POST -d param=value1 <ip-address-or host-name>
+curl -v https://emkc.org/api/v2/piston/runtimes # -v Shows the handshakes and all the headers verbose mode
 ```
 
 ### Analyse a unit on the network
