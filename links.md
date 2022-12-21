@@ -111,6 +111,27 @@ echo 'hello world' | sed -e ''
 echo 'hello world' | sed -e 's/world/mars'
 ```
 
+### För att deleta ett visst spann av radnummer i en loggfil
+### sed '<radnummer-att-starta-på>,<radnummer-att-sluta-på>d' <in-file> > <out-file>
+### T.ex
+
+```  
+sed '1,71064d' station.log > station_20221215.log
+```
+
+### Get input parameters to linux bash script
+
+```
+while getopts "u:p:" opt
+do
+   case "$opt" in
+      u ) ART_USER="$OPTARG" ;;
+      p ) ART_PWD="$OPTARG" ;;
+      ? ) helpFunction ;; # Print helpFunction in case parameter is non-existent
+   esac
+done
+```
+
 ### Remove all files starting with a digit
 
 ```
