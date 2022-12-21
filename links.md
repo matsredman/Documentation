@@ -411,3 +411,10 @@ Docker container exec -it <container-name> bash
 ```
 Docker container run -d -p 8080:80 -v $(pwd):/usr/share/nginx/html --name <container-name> nginx
 ```
+
+### Remove dangling docker images
+
+```
+docker image prune
+```
+
