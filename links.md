@@ -112,7 +112,7 @@ echo 'hello world' | sed -e 's/world/mars'
 ```
 
 ### För att deleta ett visst spann av radnummer i en loggfil
-### sed '<radnummer-att-starta-på>,<radnummer-att-sluta-på>d' <in-file> > <out-file>
+### sed '<radnummer-att-starta-på>,<radnummer-att-sluta-på>d' in-file > out-file
 ### T.ex
 
 ```  
