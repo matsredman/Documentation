@@ -420,8 +420,8 @@ docker image prune
 
 ### Smart python function
 
-´´´
+```
 def is_growing(self, l: List[float]) -> bool:
     adjacent_elem = lambda x: zip(x[:(self._count - 1)], x[1:self._count])
     return all(x_1 < x_2 for x_1, x_2 in adjacent_elem(l))
-´´´
+```
